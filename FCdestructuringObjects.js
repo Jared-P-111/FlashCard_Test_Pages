@@ -16,7 +16,6 @@ const animalsAtZoo = {
 };
 console.log(animalsAtZoo);
 
-//------------------------------DESTRUCTURING OBJECTS--------------------------------
 console.log('-----------------------Problem 2------------------------------');
 //------------------------ASSIGN VARIABLES WITH DESTRUCTURING----------------------------
 
@@ -25,10 +24,23 @@ console.log('-----------------------Problem 2------------------------------');
 const { cage1, cage3, cage4 } = animalsAtZoo;
 console.log(cage1, cage3, cage4);
 
-//------------------------------DESTRUCTURING OBJECTS--------------------------------
 console.log('-----------------------Problem 3------------------------------');
 //------------------------RENAMING VARIABLES WITH DESTRUCTURING----------------------
 
 //Rename cage1, cage3, cage4 to bearCage, chimpCage, baboonCage. Use destructuring.
 const { cage1: bearCage, cage3: chimpCage, cage4: baboonCage } = animalsAtZoo;
 console.log(bearCage, chimpCage, baboonCage);
+
+console.log('-----------------------Problem 4------------------------------');
+//--------------MUTATING VARIABLES WITH AN OBJECT AND DESTRUCTURING----------------------
+
+//create two variables using let and named a and b and assign them numbers. Then create an object
+//called obj with 3 propertys each property key should a, b, c and the values assign them numbers.
+//Now using the global var's mutate them with the object.
+
+let a = 100;
+let b = 200;
+
+const obj = { a: 22, b: 33, c: 44 };
+({ a, b } = obj);
+console.log(a, b);
